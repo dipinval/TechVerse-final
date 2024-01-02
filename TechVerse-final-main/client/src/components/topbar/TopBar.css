@@ -1,0 +1,103 @@
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 999;
+}
+
+.topLeft, .topRight{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topCenter{
+    flex: 6;
+}
+
+.topIcon, .topSearchIcon, .topDropdownIcon{
+    font-size: 20px;
+    margin-right: 15px; /* Adjusted margin */
+    color: #474747;
+    cursor: pointer;
+}
+
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topList{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.3s ease; /* For smooth transition */
+}
+
+.topListItem{
+    margin-right: 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.topListItem a {
+    text-decoration: none; /* Ensures links do not have underlines */
+}
+
+.topDropdownIcon{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        height: auto;
+    }
+    .topLeft, .topCenter, .topRight{
+        justify-content: flex-start;
+    }
+
+    .topCenter .topList{
+        display: none; 
+    }
+
+    .topCenter .topList.active{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .topRight .topListItem {
+        margin-right: 10px; /* Ensures space between LOGIN and REGISTER */
+        margin-bottom: 0;
+    }
+
+    .topListItem{
+        width: 100%;
+        margin: 0; 
+        padding: 10px 0; 
+    }
+
+    .topDropdownIcon{
+        display: block;
+        cursor: pointer;
+        margin-left: 15px; 
+    }
+
+    .topSearchIcon, .topDropdownIcon {
+        margin-right: 0; 
+    }
+}

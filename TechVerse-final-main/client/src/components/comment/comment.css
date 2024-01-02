@@ -1,0 +1,102 @@
+.comments {
+  margin-top: 20px;
+}
+
+.comments h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.comment-container {
+  margin-bottom: 5px;
+}
+
+.comment {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: row; /* Change to row to align delete button horizontally */
+  justify-content: space-between; /* Align items with space in between */
+  font-family: 'Varela Round', sans-serif;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.commentContent {
+  flex: 1; /* Take up remaining space in the flex container */
+}
+
+.comment strong {
+  font-size: 1.1em;
+  color: #3498db;
+}
+
+.comment p {
+  margin-top: 10px;
+  line-height: 1.4;
+  color: #555;
+  margin: 0; /* Remove default margin for better spacing */
+}
+
+.comment:hover {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.commentInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Varela Round', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.commentInput:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.commentButton {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Varela Round', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.commentButton:hover {
+  background-color: #2980b9;
+}
+
+/* Add a class for the username */
+.commentUsername {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Delete button styles */
+.deleteButton {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 5px 8px; /* Adjust padding for smaller size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Varela Round', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+  background-color: #c0392b;
+}

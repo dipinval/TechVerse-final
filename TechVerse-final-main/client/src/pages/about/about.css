@@ -1,0 +1,28 @@
+.AboutUs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imageArea {
+    width: 50%; 
+    margin-bottom: 0px; 
+}
+
+.imageArea img {
+    width: 100%;
+    height: 200%;
+}
+
+.content {
+    width: 75%; 
+    font-family: cursive;
+}
+
+
+.body p {
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center;
+}

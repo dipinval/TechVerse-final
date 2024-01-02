@@ -1,0 +1,50 @@
+form {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 30px;
+    background: #f8f8f8; /* Light background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333; /* Slightly darker font color */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for input fields */
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 8px; /* Slightly rounded borders */
+    background: #fff; /* White background */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: 100%;
+    font-family: 'Arial', sans-serif; /* Use a more common font family */
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #4CAF50; /* Green color for submit button */
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker shade for hover state */
+}
