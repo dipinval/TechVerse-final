@@ -41,7 +41,7 @@ const Comment = ({ postId }) => {
 
   const handleDeleteComment = async (commentId) => {
     try {
-      await axios.delete(`/comments/${commentId}/delete`);
+      await axios.delete(`http://localhost:8000/api/comments/${commentId}/delete`);
 
       // Update the comments state by filtering out the deleted comment
       setComments((prevComments) => prevComments.filter((c) => c._id !== commentId));

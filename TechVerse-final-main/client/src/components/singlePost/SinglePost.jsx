@@ -46,8 +46,8 @@ const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/posts/${post._id}`, {
-        data: { username: user.username },
+      await axios.delete(`http://localhost:8000/api/posts/${post._id}`, {
+        data: { username: user.username},
       });
       window.location.replace("/");
     } catch (err) {
@@ -57,7 +57,7 @@ const SinglePost = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/api/posts/${post._id}`, {
+      await axios.put(`http://localhost:8000/api/posts/${post._id}`, {
         username: user.username,
         title,
         desc,

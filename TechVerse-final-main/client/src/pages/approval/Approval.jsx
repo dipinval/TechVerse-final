@@ -1,6 +1,6 @@
 import { alignProperty } from '@mui/material/styles/cssUtils';
 import React, { useState, useEffect } from 'react';
-
+import './approval.css';
 const ApprovalPage = () => {
   const [posts, setPosts] = useState([]);
 

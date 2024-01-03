@@ -33,5 +33,21 @@ router.get("/:postId/comments", async (req, res) => {
       res.status(500).json({ error: "Internal Server Error" });
     }
   });
-
+  router.delete("/:commentId/delete", async (req, res) => {
+    const { commentId } = req.params;
+  
+    try {
+      const deletedComment = await Comment.findByIdAndDelete(commentId);
+  
+      if (!deletedComment) {
+        return res.status(404).json({ error: "Comment not found" });
+      }
+  
+      res.status(200).json({ message: "Comment deleted successfully" });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  });
+  
 module.exports = router;

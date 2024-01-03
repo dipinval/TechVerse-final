@@ -1,72 +1,119 @@
 .write {
-    padding-top: 50px;
-  }
-  
-  .writeImg {
-    margin-left: 200px;
-    width: 70vw;
-    height: 350px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .writeForm {
-    position: relative;
-  }
-  
-  .writeFormGroup {
-    margin-left: 150px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .writeIcon {
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    border: 1px solid;
-    border-radius: 50%;
-    color: rgb(129, 125, 125);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .writeInput {
-    font-size: 30px;
-    border: none;
-    padding: 20px;
-    width: 70vw;
-  }
-  
-  .writeInput::placeholder {
-    color: rgb(189, 185, 185);
-    font-weight: 400;
-  }
-  
-  .writeInput:focus {
-    outline-style: none;
-  }
-  
-  .writeText {
-    width: 70vw;
-    height: 100vh;
-    font-family: inherit;
-    font-size: 20px;
-  }
-  
-  .writeSubmit {
-    position: absolute;
-    top: 20px;
-    right: 50px;
-    color: white;
-    background-color: teal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+  max-width: 900px;
+  background-color:none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the approval message */
+.approvalMessage {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  border-radius: 4px;
+}
+
+/* Style for the image that's been uploaded */
+.writeImg {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Style for the form */
+.writeForm {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  background-color:white;
+}
+
+.writeFormGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.writeInput {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  height: 25px;
+  font-size: 20px;
+}
+
+/* Special style for the text area to make it more distinct */
+.writeInput.writeText {
+  min-height: 300px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Style for the submit button */
+.writeSubmit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.writeSubmit:hover {
+  background-color: #45a049;
+}
+
+/* Style for the icon in the label */
+.writeIcon {
+  cursor: pointer;
+  font-size: 24px;
+  color: #a12e2e;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .write {
     padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
   }
+
+  .writeFormGroup {
+    flex-direction: column;
+    font-family: cursive;
+  }
+}
+
+.uploadPhotoHere{
+  font-size: 30px;
+  font-family: cursive;
+}
+.writeImg.small {
+  width: 50%; 
+}
+
+.writeImg.medium {
+  width: 75%; 
+}
+
+.writeImg.large {
+  width: 100%; 
+}
+
+.colorchoose{
+  width: 30px;
+  border: 2px red;
+}
+.colorCHoose{
+  font-size: 20px;
+
+}

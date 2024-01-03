@@ -69,8 +69,9 @@ function App() {
             path="/post/:postID"
             element={
               <main>
-
+ <TopBar/>
                 <Single />
+               
               </main>
             }
           />

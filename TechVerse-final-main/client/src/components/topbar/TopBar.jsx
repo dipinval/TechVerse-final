@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './TopBar.css';
 import { Context } from '../../context/Context';
+import usericon from './user.png';
+import adminicon from './admin.png';
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:8000/images/";
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
@@ -35,10 +37,14 @@ export default function TopBar() {
           )}
         </ul>
       </div>
+      
+    
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            <img className="topImg" src={PF + user.profilePic} alt="" />
+          
+          <img className="topImg" src={user.username === 'Admin' ? adminicon : usericon} alt="" />
+
           </Link>
         ) : (
           <>
